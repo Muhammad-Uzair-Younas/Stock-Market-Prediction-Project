@@ -1,0 +1,70 @@
+[2026-09-26 03:23:04] INFO: Project directories ready. Logging module initialized successfully.
+[2026-09-26 03:23:31] INFO: Using compute device: cuda
+[2026-09-26 03:23:31] INFO: Fetching 730 days of news for Apple (AAPL)...
+[2026-09-26 03:23:58] INFO:   -> 5154 articles retrieved for AAPL
+[2026-09-26 03:23:58] INFO: Fetching 730 days of news for Microsoft (MSFT)...
+[2026-09-26 03:24:24] INFO:   -> 4950 articles retrieved for MSFT
+[2026-09-26 03:24:24] INFO: Fetching 730 days of news for NVIDIA (NVDA)...
+[2026-09-26 03:25:07] INFO:   -> 8435 articles retrieved for NVDA
+[2026-09-26 03:25:07] INFO: Fetching 730 days of news for Tesla (TSLA)...
+[2026-09-26 03:25:43] INFO:   -> 7220 articles retrieved for TSLA
+[2026-09-26 03:25:43] INFO: Fetching 730 days of news for Amazon (AMZN)...
+[2026-09-26 03:26:09] INFO:   -> 5199 articles retrieved for AMZN
+[2026-09-26 03:26:09] INFO: Fetching 730 days of news for Alphabet (GOOGL)...
+[2026-09-26 03:26:34] INFO:   -> 4831 articles retrieved for GOOGL
+[2026-09-26 03:26:34] INFO: Fetching 730 days of news for Meta (META)...
+[2026-09-26 03:26:58] INFO:   -> 4516 articles retrieved for META
+[2026-09-26 03:26:58] INFO: Fetching 730 days of news for Netflix (NFLX)...
+[2026-09-26 03:27:04] INFO:   -> 1264 articles retrieved for NFLX
+[2026-09-26 03:27:04] INFO: Fetching 730 days of news for AMD (AMD)...
+[2026-09-26 03:27:16] INFO:   -> 2326 articles retrieved for AMD
+[2026-09-26 03:27:16] INFO: Fetching 730 days of news for JPMorgan (JPM)...
+[2026-09-26 03:27:23] INFO:   -> 1290 articles retrieved for JPM
+[2026-09-26 03:27:26] INFO: Saved 45185 raw news records to data/raw_alpaca_news.csv
+[2026-09-26 03:27:30] INFO: Cleaning complete: 45185 / 45185 usable records kept.
+[2026-09-26 03:27:31] INFO: Downloading 730 days of 1-min bars for AAPL...
+[2026-09-26 03:27:44] INFO:   -> 195005 1-minute candles available for AAPL
+[2026-09-26 03:27:44] INFO: Downloading 730 days of 1-min bars for MSFT...
+[2026-09-26 03:27:57] INFO:   -> 187581 1-minute candles available for MSFT
+[2026-09-26 03:27:57] INFO: Downloading 730 days of 1-min bars for NVDA...
+[2026-09-26 03:28:11] INFO:   -> 200337 1-minute candles available for NVDA
+[2026-09-26 03:28:11] INFO: Downloading 730 days of 1-min bars for TSLA...
+[2026-09-26 03:28:25] INFO:   -> 194897 1-minute candles available for TSLA
+[2026-09-26 03:28:25] INFO: Downloading 730 days of 1-min bars for AMZN...
+[2026-09-26 03:28:39] INFO:   -> 193843 1-minute candles available for AMZN
+[2026-09-26 03:28:39] INFO: Downloading 730 days of 1-min bars for GOOGL...
+[2026-09-26 03:28:52] INFO:   -> 193319 1-minute candles available for GOOGL
+[2026-09-26 03:28:52] INFO: Downloading 730 days of 1-min bars for META...
+[2026-09-26 03:29:05] INFO:   -> 175524 1-minute candles available for META
+[2026-09-26 03:29:05] INFO: Downloading 730 days of 1-min bars for NFLX...
+[2026-09-26 03:29:15] INFO:   -> 137431 1-minute candles available for NFLX
+[2026-09-26 03:29:15] INFO: Downloading 730 days of 1-min bars for AMD...
+[2026-09-26 03:29:29] INFO:   -> 190857 1-minute candles available for AMD
+[2026-09-26 03:29:29] INFO: Downloading 730 days of 1-min bars for JPM...
+[2026-09-26 03:29:41] INFO:   -> 165717 1-minute candles available for JPM
+[2026-09-26 03:31:39] INFO: Aligned 45182 news records with real forward price movements.
+[2026-09-26 03:31:39] INFO: Chronological split -> Train: 31627 | Val: 6777 | Test: 6778
+[2026-09-26 03:31:41] INFO: Saved train/val/test splits + scaled features + scaler to 'data/features/' and 'models/numeric_feature_scaler.pkl'.
+[2026-09-26 03:31:41] INFO: Numeric feature matrix shapes -> train (31627, 5), val (6777, 5), test (6778, 5)
+[2026-09-26 03:31:52] INFO: Fusion model (BERT + numeric features) loaded onto compute device.
+[2026-09-26 03:31:52] INFO: Starting training...
+[2026-09-26 03:38:40] INFO: Epoch 1/4 | Train Loss: 1.0633 | Val Macro-F1: 0.3406
+[2026-09-26 03:38:47] INFO:   -> New best model saved (Val Macro-F1: 0.3406)
+[2026-09-26 03:45:43] INFO: Epoch 2/4 | Train Loss: 1.0193 | Val Macro-F1: 0.3525
+[2026-09-26 03:45:44] INFO:   -> New best model saved (Val Macro-F1: 0.3525)
+[2026-09-26 03:52:39] INFO: Epoch 3/4 | Train Loss: 0.9698 | Val Macro-F1: 0.3576
+[2026-09-26 03:52:50] INFO:   -> New best model saved (Val Macro-F1: 0.3576)
+[2026-09-26 03:59:46] INFO: Epoch 4/4 | Train Loss: 0.8984 | Val Macro-F1: 0.3782
+[2026-09-26 03:59:53] INFO:   -> New best model saved (Val Macro-F1: 0.3782)
+[2026-09-26 03:59:53] INFO: Training complete. Best Val Macro-F1: 0.3782 saved to models/best_stock_impact_model.pt
+[2026-09-26 04:00:20] INFO: 
+              precision    recall  f1-score   support
+
+     NEUTRAL       0.51      0.53      0.52      2850
+       SPIKE       0.33      0.31      0.32      1973
+       CRASH       0.32      0.31      0.32      1955
+
+    accuracy                           0.41      6778
+   macro avg       0.39      0.39      0.39      6778
+weighted avg       0.40      0.41      0.40      6778
+

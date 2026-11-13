@@ -1,0 +1,14 @@
+.venv/
+venv/
+.env
+__pycache__/
+*.pyc
+
+# --- secrets: never commit your real API keys ---
+config.py
+
+# --- model checkpoints excluded (too large for GitHub's 100MB file limit) ---
+models/
+
+# --- jupyter noise ---
+.ipynb_checkpoints/
